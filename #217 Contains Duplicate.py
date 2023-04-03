@@ -40,3 +40,15 @@ def contains_duplicate1(nums):
 contains_duplicate1(test_nums)
 contains_duplicate1(test_nums1)
 contains_duplicate1(test_nums2)
+
+
+# SOLUTION #3
+def contains_duplicate2(nums):
+    test_set = set(nums)
+
+    return print(len(nums) != len(test_set))
+
+
+contains_duplicate2(test_nums)
+contains_duplicate2(test_nums1)
+contains_duplicate2(test_nums2)
