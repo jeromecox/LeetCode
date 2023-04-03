@@ -22,3 +22,21 @@ def contains_duplicate(nums):
 contains_duplicate(test_nums)
 contains_duplicate(test_nums1)
 contains_duplicate(test_nums2)
+
+
+# SOLUTION #2
+def contains_duplicate1(nums):
+    nums.sort()
+    i = 0
+
+    while i < (len(nums) - 1):
+        if nums[i] == nums[i + 1]:
+            return print(True)
+        i += 1
+
+    return print(False)
+
+
+contains_duplicate1(test_nums)
+contains_duplicate1(test_nums1)
+contains_duplicate1(test_nums2)
