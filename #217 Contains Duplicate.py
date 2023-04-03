@@ -52,3 +52,17 @@ def contains_duplicate2(nums):
 contains_duplicate2(test_nums)
 contains_duplicate2(test_nums1)
 contains_duplicate2(test_nums2)
+
+
+# SOLUTION #4
+def contains_duplicate3(nums):
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] == nums[j]:
+                return print(True)
+    return print(False)
+
+
+contains_duplicate3(test_nums)
+contains_duplicate3(test_nums1)
+contains_duplicate3(test_nums2)
