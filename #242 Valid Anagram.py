@@ -27,3 +27,25 @@ def is_anagram1(s, t):
 
 is_anagram1(s1, t1)
 is_anagram1(s2, t2)
+
+
+# SOLUTION 3
+def is_anagram2(s, t):
+    if len(s) != len(t):
+        return print(False)
+
+    num_S, num_T = {}, {}
+
+    for i in range(len(s)):
+        num_S[s[i]] = 1 + num_S.get(s[i], 0)
+        num_T[t[i]] = 1 + num_T.get(t[i], 0)
+
+    for key in num_S:
+        if num_S[key] != num_T.get(key, 0):
+            return print(False)
+
+    return print(True)
+
+
+is_anagram2(s1, t1)
+is_anagram2(s2, t2)
