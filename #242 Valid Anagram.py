@@ -15,3 +15,15 @@ def is_anagram(s, t):
 
 is_anagram(s1, t1)
 is_anagram(s2, t2)
+
+
+# SOLUTION 2
+def is_anagram1(s, t):
+    if len(s) != len(t):
+        return print(False)
+
+    return print(sorted(s) == sorted(t))
+
+
+is_anagram1(s1, t1)
+is_anagram1(s2, t2)
