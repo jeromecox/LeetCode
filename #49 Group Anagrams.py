@@ -31,3 +31,23 @@ def group_anagrams(strs):
 group_anagrams(strs)
 group_anagrams(strs1)
 group_anagrams(strs2)
+
+
+# SOLUTION 2
+def group_anagrams1(strs):
+    hash_map = {}
+
+    for string in strs:
+        sorted_string = ''.join(sorted(string))
+
+        if sorted_string not in hash_map:
+            hash_map[sorted_string] = []
+
+        hash_map[sorted_string].append(string)
+
+    return print(hash_map.values())
+
+
+group_anagrams1(strs)
+group_anagrams1(strs1)
+group_anagrams1(strs2)
