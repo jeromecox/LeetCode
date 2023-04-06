@@ -49,3 +49,20 @@ def is_anagram2(s, t):
 
 is_anagram2(s1, t1)
 is_anagram2(s2, t2)
+
+
+# SOLUTION 4
+def is_anagram3(s, t):
+    if len(s) != len(t):
+        return print(False)
+
+    num_S, num_T = {}, {}
+
+    for i in range(len(s)):
+        num_S[s[i]] = 1 + num_S.get(s[i], 0)
+        num_T[t[i]] = 1 + num_T.get(t[i], 0)
+    return print(num_S == num_T)
+
+
+is_anagram3(s1, t1)
+is_anagram3(s2, t2)
