@@ -22,3 +22,19 @@ def two_sum(nums, target):
 two_sum(nums, target)
 two_sum(nums1, target1)
 two_sum(nums2, target2)
+
+
+# SOLUTION 2
+def two_sum1(nums, target):
+    hash_map = {}
+
+    for i, num in enumerate(nums):
+        diff = target - num
+        if diff in hash_map:
+            return print([hash_map[diff], i])
+        hash_map[num] = i
+
+
+two_sum1(nums, target)
+two_sum1(nums1, target1)
+two_sum1(nums2, target2)
