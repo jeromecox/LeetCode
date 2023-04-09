@@ -36,3 +36,23 @@ longest_consecutive(nums)
 longest_consecutive(nums1)
 longest_consecutive(nums2)
 longest_consecutive(nums3)
+
+
+# SOLUTION #2
+def longest_consecutive1(nums):
+    num_set = set(nums)
+    max_length = 0
+
+    for num in nums:
+        if num - 1 not in num_set:
+            length = 1
+            while num + length in num_set:
+                length += 1
+            max_length = max(length, max_length)
+    return print(max_length)
+
+
+longest_consecutive1(nums)
+longest_consecutive1(nums1)
+longest_consecutive1(nums2)
+longest_consecutive1(nums3)
