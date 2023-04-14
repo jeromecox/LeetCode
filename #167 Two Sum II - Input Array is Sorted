@@ -13,6 +13,7 @@ numbers1, target1 = [2,3,4], 6
 numbers2, target2 = [-1,0], -1
 
 
+# SOLUTION #1
 def two_sum(numbers, target):
     hashmap = {}
     for i, num in enumerate(numbers):
@@ -24,6 +25,22 @@ def two_sum(numbers, target):
         hashmap[num] = i
 
 
+# SOLUTION #2
+def two_sum1(numbers, target):
+    l, r = 0, len(numbers) - 1
+
+    while l < r:
+        if numbers[l] + numbers[r] > target:
+            r -= 1
+        elif numbers[l] + numbers[r] < target:
+            l += 1
+        else:
+            return print([l + 1, r + 1])
+
+
 two_sum(numbers, target)
 two_sum(numbers1, target1)
 two_sum(numbers2, target2)
+two_sum1(numbers, target)
+two_sum1(numbers1, target1)
+two_sum1(numbers2, target2)
