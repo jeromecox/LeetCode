@@ -29,3 +29,27 @@ def max_area(height):
 
 max_area(height)
 max_area(height1)
+
+
+# SOLUTION #2
+def max_area1(height):
+    left, right = 0, len(height) - 1
+    max_height = max(height)
+    area = 0
+
+    while left < right:
+        area = max(area, min(height[left], height[right]) * (right - left))
+
+        if height[left] <= height[right]:
+            left += 1
+        else:
+            right -= 1
+
+        if max_height * (right - left) <= area:
+            break
+
+    return print(area)
+
+
+max_area1(height)
+max_area1(height1)
