@@ -14,6 +14,8 @@ def longest_palindrome(string):
         while l < r:
             if string[l] != string[r]:
                 return False
+            l += 1
+            r -= 1
         return True
 
     longest_palindrome = ""
@@ -31,10 +33,10 @@ def longest_palindrome(string):
 
 # Test case 1
 string = "racecarbobracecar"
-assert longest_palindrome(string) == "racecar"
+assert longest_palindrome(string) == "racecarbobracecar"
 
 # Test case 2
-string = "deifiedmadamdeified"
+string = "deifiedmadam"
 assert longest_palindrome(string) == "deified"
 
 # Test case 3
@@ -43,7 +45,7 @@ assert longest_palindrome(string) == "hannah"
 
 # Test case 4
 string = "abacabbbba"
-assert longest_palindrome(string) == "abbba"
+assert longest_palindrome(string) == "abbbba"
 
 # Test case 5
 string = "abcdcba"
